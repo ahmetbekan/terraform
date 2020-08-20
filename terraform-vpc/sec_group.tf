@@ -1,14 +1,15 @@
-resource "aws_security_group" "asg-sec-group" {
-  name        = "asg-sec-group"
+resource "aws_security_group" "vpc_task" {
+  name        = "vpc_task"
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description = "TLS from VPC"
+    description = "Allow ssh"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  
 
   egress {
     from_port   = 0
@@ -16,8 +17,6 @@ resource "aws_security_group" "asg-sec-group" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+    tags              =   "${var.tags}"
 
-  tags = {
-    Name = "allow_tls"
-  }
 }

@@ -5,9 +5,9 @@ resource "aws_autoscaling_group" "example" {
     "${var.region}c",
   ]
 
-  desired_capacity = 1
-  max_size         = 1
-  min_size         = 1
+  desired_capacity = "${var.desired_capacity}"
+  max_size         = "${var.max_size}"
+  min_size         = "${var.min_size}"
 
   mixed_instances_policy {
     launch_template {
@@ -16,12 +16,12 @@ resource "aws_autoscaling_group" "example" {
       }
 
       override {
-        instance_type     = "c4.large"
+        instance_type     = "t2.small"
         weighted_capacity = "3"
       }
 
       override {
-        instance_type     = "c3.large"
+        instance_type     = "t2.micro"
         weighted_capacity = "2"
       }
     }

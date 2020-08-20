@@ -1,5 +1,6 @@
 resource "aws_elb" "bar" {
-  name = "foobar-terraform-elbs"
+  name            = "foobar-terraform-elbs"
+  security_groups = ["${aws_security_group.asg-sec-group.id}"]
 
   availability_zones = [
     "${var.region}a",
