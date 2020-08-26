@@ -1,6 +1,7 @@
 {
 
     "php_version": "74",
+    "wordpress_version": "wordpress-5.5",
     "region": "us-east-1"
 
 }

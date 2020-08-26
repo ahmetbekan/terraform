@@ -15,6 +15,5 @@ tags    =   {
     Environment             =   "Dev"
     Team                    =   "DevOps"
     Department              =   "IT"
-    Bill                    =   "CFO"
-    Quarter                 =   "3"
+    Created_by              =   "Ahmet"
    }
