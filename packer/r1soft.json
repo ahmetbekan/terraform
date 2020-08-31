@@ -22,10 +22,7 @@
          "source": "r1soft.repo",
           "destination": "/tmp/"
            },
-           {
-            "type": "breakpoint",
-            "note": "Wait for you to delete"
-          },
+           
         {
       "type": "shell",
          "inline":[
