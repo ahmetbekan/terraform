@@ -8,3 +8,4 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["${aws_security_group.allow_ssh_http_https.id}"]
   availability_zone = "us-west-2a"
   }
+  

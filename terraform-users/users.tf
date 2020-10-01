@@ -9,3 +9,6 @@ resource "aws_iam_user" "tim" {
 resource "aws_iam_user" "ben" {
   name = "ben"
 }
+  resource "aws_iam_user" "ahmet" {
+  name = "ahmet"
+}
