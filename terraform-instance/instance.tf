@@ -9,3 +9,5 @@ resource "aws_instance" "web" {
   availability_zone = "us-west-2a"
   }
   
+
+  
