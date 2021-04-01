@@ -5,7 +5,11 @@ data "aws_eks_cluster" "cluster" {
 data "aws_eks_cluster_auth" "cluster" {
   name = module.my-cluster.cluster_id
 }
+<<<<<<< HEAD
 ##
+=======
+#
+>>>>>>> c9d9dcb9b2bee7d134bb1bd9351f051eca6dcbae
 provider "kubernetes" {
   host = data.aws_eks_cluster.cluster.endpoint
   cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority.0.data)
